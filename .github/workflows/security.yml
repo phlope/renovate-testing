@@ -17,4 +17,4 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 2 && echo "Verify passed"
+      - run: sleep 6 && echo "Verify passed"
