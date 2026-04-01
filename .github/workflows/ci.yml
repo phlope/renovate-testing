@@ -4,15 +4,17 @@ on:
   pull_request:
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CI passed"
+      - run: sleep 2 && echo "Lint passed"
 
-      - name: Post commit status
-        run: |
-          curl -s -X POST \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.event.pull_request.head.sha }}" \
-            -d '{"state":"success","context":"ci/check","description":"CI passed"}'
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Tests passed"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Build passed"
