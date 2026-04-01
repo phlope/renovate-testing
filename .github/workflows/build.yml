@@ -4,11 +4,21 @@ on:
   pull_request:
 
 jobs:
-  build:
+  compile:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.0
       - uses: actions/setup-node@v4.0.0
         with:
           node-version: '20'
-      - run: sleep 2 && echo "Build passed"
+      - run: sleep 2 && echo "Compile passed"
+
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Package passed"
+
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Publish passed"
