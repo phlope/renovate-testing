@@ -7,5 +7,5 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 10 && echo "CI passed"
+      - run: sleep 1 && echo "CI passed"
 
