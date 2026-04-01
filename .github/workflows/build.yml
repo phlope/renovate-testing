@@ -11,4 +11,4 @@ jobs:
       - uses: actions/setup-node@v4.0.0
         with:
           node-version: '20'
-      - run: echo "Build passed"
+      - run: sleep 2 && echo "Build passed"

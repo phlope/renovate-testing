@@ -4,8 +4,17 @@ on:
   pull_request:
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 1 && echo "CI passed"
+      - run: sleep 2 && echo "Lint passed"
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Tests passed"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 2 && echo "Build passed"
