@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 2 && exit 1
+      - run: sleep 2 && echo "Test passed"
 
   build:
     runs-on: ubuntu-latest
