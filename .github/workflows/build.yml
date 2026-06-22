@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4.3.1
       - uses: actions/setup-node@v4.4.0
         with:
-          node-version: '20'
+          node-version: '24'
       - run: sleep 2 && echo "Compile passed"
 
   package:
